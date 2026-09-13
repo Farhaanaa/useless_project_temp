@@ -151,16 +151,72 @@ function updateUnlock(uselessness) {
 function showThinking() {
   if (document.getElementById("thinkingPopup")) return;
 
+  const thinkingMessages = [
+    {
+      icon: "🧠",
+      title: "ഒന്ന് ആലോചിക്കട്ടെ...",
+      subtitle: "ഇത് വെറുതെ വിട്ടാൽ മതിയായിരുന്നു.",
+    },
+    {
+      icon: "🤨",
+      title: "ഇത് എന്താ ചോദിച്ചത്...",
+      subtitle: "ഞാനും ഇപ്പോ confused ആണ്.",
+    },
+    {
+      icon: "☕",
+      title: "ആദ്യം ഒരു ചായ എടുക്കട്ടെ...",
+      subtitle: "പിന്നെ ഈ പ്രശ്നം നോക്കാം.",
+    },
+    {
+      icon: "🧐",
+      title: "ഗൗരവമായി പരിശോധിക്കുന്നു...",
+      subtitle: "ആവശ്യമില്ലാത്തത്ര ഗൗരവമായി.",
+    },
+    {
+      icon: "😭",
+      title: "ഒരു നിമിഷം...",
+      subtitle: "തലച്ചോർ തുറക്കുകയാണ്.",
+    },
+    {
+      icon: "📚",
+      title: "ഇതിനായി പഠിക്കേണ്ടി വരുമോ...",
+      subtitle: "ചോദ്യം കണ്ടിട്ട് പേടിയായി.",
+    },
+    {
+      icon: "🤔",
+      title: "ഇതിൽ എന്തോ വലിയ കാര്യമുണ്ട്...",
+      subtitle: "അല്ലെങ്കിൽ ഇല്ല.",
+    },
+    {
+      icon: "📝",
+      title: "ഞാൻ കുറച്ച് overthink ചെയ്യട്ടെ...",
+      subtitle: "അതാണ് എന്റെ ജോലി.",
+    },
+    {
+      icon: "🌿",
+      title: "ശരി... വെറുതെ ആലോചിക്കാം.",
+      subtitle: "കാരണം എന്തിനാണെന്ന് അറിയില്ല.",
+    },
+    {
+      icon: "😐",
+      title: "ഇതിന് ഉത്തരം ഉണ്ടോ?",
+      subtitle: "ഉണ്ടാക്കിയെടുക്കാം.",
+    },
+  ];
+
+  const randomMessage =
+    thinkingMessages[Math.floor(Math.random() * thinkingMessages.length)];
+
   const popup = document.createElement("div");
 
   popup.id = "thinkingPopup";
 
   popup.innerHTML = `
-    <div class="thinking-icon">🧠</div>
+    <div class="thinking-icon">${randomMessage.icon}</div>
 
     <div>
-      <strong>Overthinking...</strong>
-      <span>Taking this far too seriously.</span>
+      <strong>${randomMessage.title}</strong>
+      <span>${randomMessage.subtitle}</span>
     </div>
   `;
 
@@ -181,11 +237,12 @@ function showThinking() {
 
   popup.querySelector("strong").style.display = "block";
   popup.querySelector("strong").style.fontFamily =
-    '"Cormorant Garamond", serif';
+    '"Noto Sans Malayalam", sans-serif';
   popup.querySelector("strong").style.fontSize = "17px";
+  popup.querySelector("strong").style.fontWeight = "600";
 
   popup.querySelector("span").style.display = "block";
-  popup.querySelector("span").style.marginTop = "2px";
+  popup.querySelector("span").style.marginTop = "3px";
   popup.querySelector("span").style.fontFamily = '"Kalam", cursive';
   popup.querySelector("span").style.fontSize = "11px";
   popup.querySelector("span").style.color = "#88877e";

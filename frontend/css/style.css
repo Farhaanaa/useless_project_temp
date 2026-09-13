@@ -645,3 +645,17 @@ a {
     transform: scale(0.75);
   }
 }
+.chat-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-logo-image {
+  width: 650px;
+  height: 650px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}

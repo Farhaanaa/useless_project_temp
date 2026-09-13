@@ -6,11 +6,12 @@
 
     <title>Chat · VerutheAI</title>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -25,7 +26,11 @@
       <aside class="sidebar">
         <div>
           <div class="chat-brand">
-            <span class="chat-brand-icon">❧</span>
+            <img
+              src="assets/mascot/logo.png"
+              class="chat-logo"
+              alt="VerutheAI logo"
+            />
 
             <div>
               <div class="chat-brand-name">വെറുതെAI</div>
@@ -56,6 +61,8 @@
       <!-- CHAT AREA -->
 
       <section class="chat-container">
+        <!-- HEADER -->
+
         <header class="chat-header">
           <div>
             <h1>Chat with VerutheAI</h1>
@@ -76,7 +83,7 @@
 
           <div class="score-card" id="scoreCard" style="display: none">
             <div class="score-info">
-              <span>Uselessness Level</span>
+              <span> Uselessness Level </span>
 
               <div class="score-bar">
                 <div class="score-fill" id="scoreFill" style="width: 0%"></div>
