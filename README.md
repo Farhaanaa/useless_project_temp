@@ -1,6 +1,6 @@
 <img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-# [Project Name] 🎯
+# VertheAI 🎯
 
 ## Basic Details
 
@@ -117,8 +117,7 @@ DISPLAY RESPONSE TO USER
 
 # Video
 
-[Add your demo video link here]
-_Explain what the video demonstrates_
+https://drive.google.com/file/d/1aUjy2Yi7qZuD5-_H627U30JMs13lIi5D/view?usp=sharing
 
 ## Team Contributions
 
