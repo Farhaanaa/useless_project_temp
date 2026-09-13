@@ -29,17 +29,20 @@ chatForm.addEventListener("submit", async (event) => {
   showThinking();
 
   try {
-    const response = await fetch("http://localhost:3000/chat", {
-      method: "POST",
+    const response = await fetch(
+      "https://flying-tantrum-abreast.ngrok-free.dev/chat",
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          message,
+        }),
       },
-
-      body: JSON.stringify({
-        message,
-      }),
-    });
+    );
 
     if (!response.ok) {
       throw new Error("Server error");
