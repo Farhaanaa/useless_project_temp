@@ -29,6 +29,7 @@
 
             <div>
               <div class="chat-brand-name">വെറുതെAI</div>
+
               <div class="chat-brand-tagline">for no reason at all.</div>
             </div>
           </div>
@@ -71,61 +72,29 @@
         <!-- MESSAGES -->
 
         <div class="messages" id="messages">
-          <!-- Example user message -->
+          <!-- Score card will be moved here by JavaScript -->
 
-          <div class="message user-message">
-            <div>
-              <div class="message-bubble">Should I eat pizza tonight?</div>
+          <div class="score-card" id="scoreCard" style="display: none">
+            <div class="score-info">
+              <span>Uselessness Level</span>
 
-              <div class="message-time">Just now</div>
-            </div>
-          </div>
-
-          <!-- Example AI message -->
-
-          <div class="message ai-message">
-            <div class="avatar">
-              <div class="avatar-face">
-                <span>•</span>
-                <span>•</span>
-                <small>⌣</small>
+              <div class="score-bar">
+                <div class="score-fill" id="scoreFill" style="width: 0%"></div>
               </div>
             </div>
 
-            <div class="ai-content">
-              <div class="message-bubble">
-                Yes. I considered the nutritional implications, economic
-                consequences and possibility that you may regret this decision.
-                All three were defeated by the fact that pizza exists.
-              </div>
+            <div class="score-number" id="scoreNumber">0%</div>
 
-              <div class="message-time">VerutheAI · just now</div>
+            <div class="score-note">
+              impressively<br />
+              unnecessary
             </div>
-          </div>
-        </div>
-
-        <!-- SCORE -->
-
-        <div class="score-card">
-          <div class="score-info">
-            <span>Uselessness Level</span>
-
-            <div class="score-bar">
-              <div class="score-fill" id="scoreFill" style="width: 94%"></div>
-            </div>
-          </div>
-
-          <div class="score-number" id="scoreNumber">94%</div>
-
-          <div class="score-note">
-            impressively<br />
-            unnecessary
           </div>
         </div>
 
         <!-- UNLOCK -->
 
-        <div class="unlock-card">
+        <div class="unlock-card" id="unlockCard" style="display: none">
           <div class="unlock-icon">🌼</div>
 
           <div class="unlock-text">
@@ -134,9 +103,11 @@
             <span> Your question was sufficiently useless. </span>
           </div>
 
-          <button>Place it</button>
+          <button type="button" id="placeButton">Place it</button>
 
-          <button class="secondary-button">Later</button>
+          <button type="button" class="secondary-button" id="laterButton">
+            Later
+          </button>
         </div>
 
         <!-- INPUT -->

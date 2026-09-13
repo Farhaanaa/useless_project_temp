@@ -11,6 +11,7 @@ async function askOllama(message) {
     },
     body: JSON.stringify({
       model: MODEL,
+
       messages: [
         {
           role: "system",
@@ -21,7 +22,10 @@ async function askOllama(message) {
           content: message,
         },
       ],
+
       stream: false,
+
+      format: "json",
     }),
   });
 
@@ -31,7 +35,22 @@ async function askOllama(message) {
 
   const data = await response.json();
 
-  return data.message.content;
+  let content = data.message.content.trim();
+
+  // Remove markdown code fences if the model adds them
+  content = content.replace(/^```json\s*/i, "");
+  content = content.replace(/^```\s*/i, "");
+  content = content.replace(/\s*```$/i, "");
+
+  // Extract the JSON object if the model adds extra text
+  const start = content.indexOf("{");
+  const end = content.lastIndexOf("}");
+
+  if (start !== -1 && end !== -1) {
+    content = content.slice(start, end + 1);
+  }
+
+  return content;
 }
 
 module.exports = { askOllama };
