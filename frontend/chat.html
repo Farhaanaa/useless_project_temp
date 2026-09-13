@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Chat · VerutheAI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+  </head>
+
+  <body>
+    <main class="chat-page">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+        <div>
+          <div class="chat-brand">
+            <span class="chat-brand-icon">❧</span>
+
+            <div>
+              <div class="chat-brand-name">വെറുതെAI</div>
+              <div class="chat-brand-tagline">for no reason at all.</div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav">
+            <a href="chat.html" class="sidebar-item active">
+              <span>✦</span>
+              Chat
+            </a>
+
+            <a href="index.html" class="sidebar-item">
+              <span>⌂</span>
+              Home
+            </a>
+          </nav>
+        </div>
+
+        <div class="sidebar-note">
+          Ask anything.<br />
+          Get <span>nothing useful.</span>
+        </div>
+      </aside>
+
+      <!-- CHAT AREA -->
+
+      <section class="chat-container">
+        <header class="chat-header">
+          <div>
+            <h1>Chat with VerutheAI</h1>
+
+            <p>Ask something completely unnecessary.</p>
+          </div>
+
+          <div class="header-note">
+            scientifically<br />
+            questionable 🌿
+          </div>
+        </header>
+
+        <!-- MESSAGES -->
+
+        <div class="messages" id="messages">
+          <!-- Example user message -->
+
+          <div class="message user-message">
+            <div>
+              <div class="message-bubble">Should I eat pizza tonight?</div>
+
+              <div class="message-time">Just now</div>
+            </div>
+          </div>
+
+          <!-- Example AI message -->
+
+          <div class="message ai-message">
+            <div class="avatar">
+              <div class="avatar-face">
+                <span>•</span>
+                <span>•</span>
+                <small>⌣</small>
+              </div>
+            </div>
+
+            <div class="ai-content">
+              <div class="message-bubble">
+                Yes. I considered the nutritional implications, economic
+                consequences and possibility that you may regret this decision.
+                All three were defeated by the fact that pizza exists.
+              </div>
+
+              <div class="message-time">VerutheAI · just now</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCORE -->
+
+        <div class="score-card">
+          <div class="score-info">
+            <span>Uselessness Level</span>
+
+            <div class="score-bar">
+              <div class="score-fill" id="scoreFill" style="width: 94%"></div>
+            </div>
+          </div>
+
+          <div class="score-number" id="scoreNumber">94%</div>
+
+          <div class="score-note">
+            impressively<br />
+            unnecessary
+          </div>
+        </div>
+
+        <!-- UNLOCK -->
+
+        <div class="unlock-card">
+          <div class="unlock-icon">🌼</div>
+
+          <div class="unlock-text">
+            <strong> A flower has appeared! </strong>
+
+            <span> Your question was sufficiently useless. </span>
+          </div>
+
+          <button>Place it</button>
+
+          <button class="secondary-button">Later</button>
+        </div>
+
+        <!-- INPUT -->
+
+        <form class="chat-input-area" id="chatForm">
+          <button
+            type="button"
+            class="attachment-button"
+            title="Absolutely unnecessary"
+          >
+            ✿
+          </button>
+
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Ask VerutheAI something..."
+            autocomplete="off"
+          />
+
+          <button
+            type="submit"
+            class="send-button"
+            title="Ask something useless"
+          >
+            ↑
+          </button>
+        </form>
+      </section>
+
+      <!-- DECORATIONS -->
+
+      <div class="chat-decoration decoration-top-right">🌿</div>
+
+      <div class="chat-decoration decoration-bottom-left">🌱</div>
+
+      <div class="chat-decoration decoration-bottom-right">🦋</div>
+    </main>
+
+    <script src="js/chat.js"></script>
+  </body>
+</html>

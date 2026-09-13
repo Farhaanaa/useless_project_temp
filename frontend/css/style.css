@@ -1,0 +1,647 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Kalam:wght@400&display=swap");
+
+:root {
+  --cream: #f7f3ea;
+  --paper: #fbf8f1;
+  --green: #60775d;
+  --dark-green: #354a38;
+  --text: #172139;
+  --muted: #73736d;
+  --lavender: #e9e3ef;
+  --peach: #f4d8c9;
+  --line: rgba(70, 78, 61, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e9ebe2;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.landing-page {
+  position: relative;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 20px 45px 30px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 45%,
+      rgba(255, 255, 255, 0.8),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(220, 226, 208, 0.5),
+      transparent 25%
+    ),
+    var(--cream);
+
+  border: 1px solid rgba(60, 70, 55, 0.08);
+  border-radius: 20px;
+
+  box-shadow: 0 25px 60px rgba(42, 48, 38, 0.12);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  font-size: 38px;
+  color: var(--green);
+  transform: rotate(-12deg);
+}
+
+.brand-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 0.9;
+  color: var(--text);
+}
+
+.brand-tagline {
+  margin-top: 7px;
+  font-family: "Kalam", cursive;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-link {
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.nav-link.active {
+  background: rgba(239, 234, 223, 0.8);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.try-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: white;
+  background: var(--green);
+
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(69, 89, 66, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.try-button:hover {
+  transform: translateY(-2px);
+  background: var(--dark-green);
+
+  box-shadow: 0 12px 25px rgba(69, 89, 66, 0.25);
+}
+
+.try-button span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.try-button.small {
+  padding: 11px 20px;
+  font-size: 13px;
+}
+
+.main-button {
+  min-width: 230px;
+  padding: 16px 28px;
+  margin-top: 27px;
+  font-size: 15px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  z-index: 3;
+
+  text-align: center;
+
+  max-width: 850px;
+  margin: 75px auto 0;
+}
+
+.hero-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sprout {
+  color: var(--green);
+  font-size: 42px;
+  line-height: 1;
+  transform: rotate(-8deg);
+}
+
+.hero-logo h1 {
+  margin-top: -3px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 43px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.hero h2 {
+  margin-top: 20px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 5vw, 70px);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -2px;
+}
+
+.hero h2 span {
+  color: var(--green);
+}
+
+.hero-description {
+  margin-top: 18px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  color: #60626a;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 38px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 25px;
+
+  border-right: 1px solid var(--line);
+  text-align: left;
+}
+
+.feature:last-child {
+  border-right: none;
+}
+
+.feature-icon {
+  font-size: 28px;
+  color: var(--green);
+}
+
+.feature strong {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.feature span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 11px;
+  color: #8a8a84;
+}
+
+/* =========================
+   HANDWRITTEN NOTES
+========================= */
+
+.note {
+  position: absolute;
+  z-index: 4;
+
+  font-family: "Kalam", cursive;
+  font-size: 15px;
+  line-height: 1.5;
+
+  color: #77766f;
+
+  transform: rotate(-7deg);
+}
+
+.note-left {
+  left: 45px;
+  top: 145px;
+}
+
+.note-right {
+  right: 150px;
+  top: 175px;
+
+  padding: 14px 20px;
+
+  background: rgba(246, 232, 211, 0.7);
+
+  box-shadow: 0 5px 12px rgba(60, 60, 40, 0.06);
+
+  transform: rotate(5deg);
+}
+
+/* =========================
+   BOTTOM DECORATION
+========================= */
+
+.bottom-decoration {
+  position: relative;
+
+  height: 270px;
+
+  margin-top: 15px;
+}
+
+.desk-books {
+  position: absolute;
+  left: 5%;
+  bottom: 5px;
+
+  width: 120px;
+
+  font-family: "Kalam", cursive;
+  font-size: 15px;
+  text-align: center;
+
+  transform: rotate(-4deg);
+}
+
+.desk-books div {
+  padding: 5px 10px;
+  margin-top: -1px;
+
+  background: #eee7d9;
+
+  border: 1px solid rgba(80, 70, 55, 0.08);
+
+  box-shadow: 0 3px 4px rgba(50, 50, 40, 0.08);
+}
+
+.desk-books div:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.desk-books div:nth-child(3) {
+  transform: rotate(-2deg);
+}
+
+/* =========================
+   MASCOT
+========================= */
+
+.mascot-placeholder {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+
+  width: 210px;
+  height: 145px;
+
+  transform: translateX(-50%);
+
+  background: #f6f0e4;
+
+  border-radius: 110px 110px 35px 35px;
+
+  border: 3px solid #534d40;
+
+  box-shadow: 0 15px 25px rgba(50, 50, 40, 0.12);
+}
+
+.mascot-placeholder::before {
+  content: "";
+
+  position: absolute;
+
+  width: 30px;
+  height: 55px;
+
+  left: 50%;
+  top: -45px;
+
+  transform: translateX(-50%);
+
+  border-left: 5px solid var(--green);
+  border-radius: 50%;
+}
+
+.mascot-face {
+  position: absolute;
+
+  left: 50%;
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  gap: 45px;
+
+  font-size: 20px;
+}
+
+.mascot-face .mouth {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+
+  transform: translateX(-50%);
+}
+
+/* =========================
+   CUP
+========================= */
+
+.cup {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+
+  width: 105px;
+  padding: 25px 10px 18px;
+
+  background: #d9c1a2;
+
+  border-radius: 7px 7px 20px 20px;
+
+  font-family: "Kalam", cursive;
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: center;
+
+  box-shadow: 0 8px 15px rgba(60, 50, 40, 0.1);
+}
+
+/* =========================
+   BOTTOM CAPTION
+========================= */
+
+.bottom-caption {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  font-family: "Kalam", cursive;
+  font-size: 13px;
+  color: #77766f;
+}
+
+.bottom-caption span {
+  color: var(--green);
+  font-size: 20px;
+}
+
+/* =========================
+   SOFT BOTANICAL SHAPES
+========================= */
+
+.plant {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+
+  opacity: 0.65;
+}
+
+.plant-left {
+  left: -30px;
+  bottom: -30px;
+
+  width: 210px;
+  height: 350px;
+
+  border-left: 4px solid #829477;
+  border-radius: 50%;
+
+  transform: rotate(-20deg);
+}
+
+.plant-left::before,
+.plant-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+  height: 32px;
+
+  background: #a8b69b;
+
+  border-radius: 100% 0 100% 0;
+}
+
+.plant-left::before {
+  left: 5px;
+  top: 120px;
+
+  transform: rotate(25deg);
+}
+
+.plant-left::after {
+  left: 45px;
+  top: 205px;
+
+  transform: rotate(-20deg);
+}
+
+.plant-right {
+  right: -80px;
+  top: 30px;
+
+  width: 180px;
+  height: 380px;
+
+  border-left: 5px solid #7c9177;
+  border-radius: 50%;
+
+  transform: rotate(12deg);
+}
+
+.plant-right::before,
+.plant-right::after {
+  content: "";
+
+  position: absolute;
+
+  width: 80px;
+  height: 35px;
+
+  background: #a5b398;
+
+  border-radius: 100% 0 100% 0;
+}
+
+.plant-right::before {
+  left: -20px;
+  top: 100px;
+
+  transform: rotate(-30deg);
+}
+
+.plant-right::after {
+  left: 15px;
+  top: 200px;
+
+  transform: rotate(20deg);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .landing-page {
+    margin: 15px;
+    padding: 20px 25px;
+  }
+
+  .nav-links .nav-link:nth-child(2) {
+    display: none;
+  }
+
+  .hero {
+    margin-top: 60px;
+  }
+
+  .note-left,
+  .note-right {
+    display: none;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature {
+    border-right: none;
+  }
+
+  .bottom-decoration {
+    height: 220px;
+  }
+}
+
+@media (max-width: 550px) {
+  .landing-page {
+    margin: 8px;
+    border-radius: 14px;
+  }
+
+  .brand-name {
+    font-size: 27px;
+  }
+
+  .brand-tagline {
+    font-size: 11px;
+  }
+
+  .try-button.small {
+    padding: 9px 12px;
+  }
+
+  .hero {
+    margin-top: 45px;
+  }
+
+  .hero h2 {
+    font-size: 43px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .bottom-decoration {
+    height: 180px;
+  }
+
+  .mascot-placeholder {
+    transform: translateX(-50%) scale(0.75);
+    transform-origin: bottom center;
+  }
+
+  .desk-books,
+  .cup {
+    transform: scale(0.75);
+  }
+}
